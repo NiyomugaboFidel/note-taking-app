@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', serif ;
+}
+/*  ---------------SMOOTH SCROLL------------- */
+html{
+    scroll-behavior: smooth;
+}
+/*------ CHANGE THE SCOROLL BAR DESIGN------------ */
+::-webkit-scrollbar{
+    width:10px ;
+    border-radius: 25px;
+}
+::-webkit-scrollbar-track{
+    background: #f1f1f1;
+    border-radius: 25px ;
+}
+::-webkit-scrollbar-thumb{
+    background: #bbb;
+    border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #aaa;
+}
+
+.btn-hover{
+    @apply hover:bg-customSilver-dark rounded-full h-[40px] w-[40px] flex items-center justify-center transition-all
+    ease-in-out duration-300 hover:scale-105
+}
+.hover-icon{
+    @apply rounded-sm hover:bg-primary-100 text-bodyLarge transition-all ease-in-out duration-300
+}
+
+button, li,span{
+    cursor: pointer;
+}
+
+
+
+/* Custom styles for the Quill editor */
+  
+  .quill-editor .ql-toolbar {
+    border-bottom: 2px solid #d1d5db; /* Tailwind gray-300 */
+    background-color:#000; /* Tailwind gray-50 */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-radius: 5px;
+  }
+  
+  .quill-editor .ql-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    border: none;
+    max-height: 40vh; /* Equivalent to Tailwind max-h-96 */
+  }
+  
